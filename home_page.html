@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src = "js_files\home_page.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel = "stylesheet" href="css_files\home_page.css">
+	</head>
+	<body>
+		<div class = "side" onmouseover = show('side') onmouseout = hide('side') >
+			<a href="home_page.html"><p class = "list">Dashboard</p></a>
+			<a href="fp_track.html"><p class = "list">Carbon FP track</p></a>
+			<a href="prediction.html"><p class = "list">Prediction</p></a>
+			<img class = "dash_image" src = "images\menu.jpg"></img>
+
+				
+		</div>
+		<div class = "dash" >
+			<div class = "menu" onmouseover = show('side') onmouseout = hide('side') >
+				<div class = "bar"></div>
+				<div class = "bar"></div>
+				<div class = "bar"></div>
+			</div>	
+			
+			<div class="box">
+				<img class="account" src="account icon.png" alt="account_icon">    		
+				<button class="button" onmouseover="change_green(this)" onmouseout="change_normal(this)" onclick="opensignin()">Sign in</button>
+			</div>	
+			
+		</div>	
+		<img src = "images\dash.jpg" class = "home_image"></img>
+	
+		
+					
+	</body>
+</html>

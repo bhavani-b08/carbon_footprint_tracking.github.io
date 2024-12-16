@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js_files\details.js"></script>
+    <link rel="stylesheet" href="css_files\details.css">
+    
+</head>
+<body>
+    <div class="userdetails">
+        <form onsubmit="handleSignup(event)">
+            <article class="detail"><label>EB Bill/Month</label><input id="eb" class="input" required type="number"></article>
+            <article class="detail"><label>Gas Bill/Month</label><input id="gas" class="input" required type="number"></article>
+            <article class="detail"><label>Oil Bill</label><input id="oil" class="input" required type="number"></article>
+            <article class="detail"><label>Vehicle Mileage/Year</label><input id="mil" class="input" required type="number"></article>
+            <article class="detail"><label>Flights(4h or less)</label><input id="4rl" class="input" required type="number"></article>
+            <article class="detail"><label>Flights(4h or more)</label><input id="4rm" class="input" required type="number"></article>
+            <article class="detail"><label>Have you recycled Newspaper?<input class="input" name="news" required type="radio" value="Yes">Yes<input class="input" name="news" required type="radio" value="No">No</label></article>
+            <article class="detail"><label>Have you recycled Aluminium and Tin?<input class="input" name="AT" required type="radio" value="Yes">Yes<input class="input" name="AT" required type="radio" value="No">No</label></article>
+            <article class="detail"><label>Current Date</label><input class="input" required type="date"></article>
+            <a class="prev" href="home_page.html"> previous </a>
+            <button class="submit" type="submit" onmouseover="change_green(this)" onmouseout="change_normal(this)" onclick="getradionews()">Calculate</button>
+        </form>
+    </div>
+    <div id="radio_news" hidden></div>
+    <div id="radio_AT" hidden></div>
+</body>
+</html>
