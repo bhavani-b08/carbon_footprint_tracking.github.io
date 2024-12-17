@@ -9,10 +9,10 @@ overflow:hidden;
 }
 .background-image {
 position:absolute;
-    width: 800px;
-    height: 600px;
-         background-image:url('file:///C:/Users/hp/OneDrive/Pictures/track.png');
-    background-size: cover;
+width: 800px;
+height: 600px;
+background-image:url('../images/track.png');
+background-size: cover;
 opacity:0.6; 
 z-index:0;                     	
 }
