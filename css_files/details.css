@@ -1,22 +1,34 @@
-.detail {
-    margin-left: 20px;
+
+fieldset{
+    
     margin-top: 20px;
-    text-align: left;
+    margin-left: 30px ;
+    width: 500px;
+    border-radius: 15px;
 }
-.input {
-    text-align: right;
-    margin-left: 20px;
+
+article{
+    position: relative;
+    display: block;
+    padding: 10px ;
+}
+input{
+    position: relative;
+    right: 0px ;
 }
 .userdetails {
-    width: 500px;
+    /* position: absolute; */
+    width: 600px;
     background-color: white;
-    height: 450px;
-    margin-top: 50px;
+    height: 650px  ;
+    margin-top: 3% ;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 body {
     margin: 0;
     padding: 0;
-    background-image: url(file:///C:/Users/hp/OneDrive/Pictures/credential.jpg);
+    background-image: url('../images/credential.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -29,4 +41,8 @@ body {
 }
 .prev {
     margin-left: 20px;
+    margin-bottom: 20px ;
+}
+legend{
+    color: red;
 }
