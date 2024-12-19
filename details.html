@@ -10,15 +10,106 @@
 <body>
     <div class="userdetails">
         <form onsubmit="handleSignup(event)">
-            <article class="detail"><label>EB Bill/Month</label><input id="eb" class="input" required type="number"></article>
-            <article class="detail"><label>Gas Bill/Month</label><input id="gas" class="input" required type="number"></article>
-            <article class="detail"><label>Oil Bill</label><input id="oil" class="input" required type="number"></article>
-            <article class="detail"><label>Vehicle Mileage/Year</label><input id="mil" class="input" required type="number"></article>
-            <article class="detail"><label>Flights(4h or less)</label><input id="4rl" class="input" required type="number"></article>
-            <article class="detail"><label>Flights(4h or more)</label><input id="4rm" class="input" required type="number"></article>
-            <article class="detail"><label>Have you recycled Newspaper?<input class="input" name="news" required type="radio" value="Yes">Yes<input class="input" name="news" required type="radio" value="No">No</label></article>
-            <article class="detail"><label>Have you recycled Aluminium and Tin?<input class="input" name="AT" required type="radio" value="Yes">Yes<input class="input" name="AT" required type="radio" value="No">No</label></article>
-            <article class="detail"><label>Current Date</label><input class="input" required type="date"></article>
+            <fieldset>
+                <legend>Energy Usage</legend>
+                <article>
+                    <label for="energy_consumed">Energy Consumed (kWh):</label>
+                    <input type="number" id="energy_consumed" name="energy_consumed"></article>
+                <article>
+                    <label for="electricity_factor">Electricity Emission Factor (kg CO₂/kWh):</label>
+                    <input type="number" id="electricity_factor" name="electricity_factor" step="0.01">
+                </article>
+            </fieldset>
+
+            <fieldset>
+                <legend>Fuel Usage</legend>
+                <article>
+                    <label for="fuel_consumed">Fuel Consumed (liters):</label>
+                    <input type="number" id="fuel_consumed" name="fuel_consumed">
+                </article>
+                <article>
+                    <label for="fuel_type">Fuel Type:</label>
+                    <input type="text" id="fuel_type" name="fuel_type">
+                </article>
+                <article>
+                    <label for="fuel_factor">Fuel Emission Factor (kg CO₂/liter):</label>
+                    <input type="number" id="fuel_factor" name="fuel_factor" step="0.01">
+                </article>
+            </fieldset>
+
+            <fieldset>
+                <legend>Transportation Details</legend>
+                <article>
+                    <label for="distance_traveled">Distance Traveled (km):</label>
+                    <input type="number" id="distance_traveled" name="distance_traveled">
+                </article>
+                <article>
+                    <label for="load_weight">Load Weight (tons):</label>
+                    <input type="number" id="load_weight" name="load_weight">
+                </article>
+                <article>
+                    <label for="mode_of_transport">Mode of Transport:</label>
+                    <input type="text" id="mode_of_transport" name="mode_of_transport">
+                </article>
+                <article>
+                    <label for="transport_factor">Transport Emission Factor (kg CO₂/ton-km):</label>
+                    <input type="number" id="transport_factor" name="transport_factor" step="0.01">
+                </article>
+            </fieldset>
+
+            <fieldset>
+                <legend>Methane Emissions</legend>
+                <article>
+                    <label for="methane_volume">Methane Released (m³):</label>
+                    <input type="number" id="methane_volume" name="methane_volume"></article>
+                <article>
+                    <label for="gwp_methane">Global Warming Potential of Methane (default: 28):</label>
+                    <input type="number" id="gwp_methane" name="gwp_methane" value="28" step="0.1">
+                </article>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Land Use</legend>
+                <article>
+                    <label for="area_cleared">Area Cleared (hectares):</label>
+                    <input type="number" id="area_cleared" name="area_cleared">
+                </article>
+                <article>
+                    <label for="carbon_stock_per_hectare">Carbon Stock per Hectare (kg CO₂/hectare):</label>
+                    <input type="number" id="carbon_stock_per_hectare" name="carbon_stock_per_hectare" step="0.1">
+                </article>
+                <article>
+                    <label for="area_rehabilitated">Area Rehabilitated (hectares):</label>
+                    <input type="number" id="area_rehabilitated" name="area_rehabilitated">
+                </article>
+                <article>
+                    <label for="rehab_rate">Rehabilitation Rate (kg CO₂/hectare/year):</label>
+                    <input type="number" id="rehab_rate" name="rehab_rate" step="0.1">
+                </article>
+            </fieldset>
+
+            <fieldset>
+                <legend>Coal Production</legend>
+                <article>
+                    <label for="coal_produced">Amount of Coal Produced (tons):</label>
+                    <input type="number" id="coal_produced" name="coal_produced">
+                </article>
+                <article>
+                    <label for="coal_type">Coal Type:</label>
+                    <input type="text" id="coal_type" name="coal_type">
+                </article>
+                <article>
+                    <label for="coal_emission_factor">Emission Factor of Coal (kg CO₂/ton):</label>
+                    <input type="number" id="coal_emission_factor" name="coal_emission_factor" step="0.1">
+                </article>
+                <article>
+                    <label for="carbon_content_fraction">Carbon Content Fraction (fraction between 0 and 1):</label>
+                    <input type="number" id="carbon_content_fraction" name="carbon_content_fraction" min="0" max="1" step="0.01">
+                </article>
+            </fieldset>
+
+
+            
             <a class="prev" href="home_page.html"> previous </a>
             <button class="submit" type="submit" onmouseover="change_green(this)" onmouseout="change_normal(this)" onclick="getradionews()">Calculate</button>
         </form>
